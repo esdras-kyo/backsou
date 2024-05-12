@@ -3,7 +3,6 @@ import cors from 'cors'
 import {Mercado_Pago} from './router/MC_Router.js'
 import { google} from "googleapis"
 import dotenv from 'dotenv'
-import functions from "firebase-functions"
 
 dotenv.config()
 

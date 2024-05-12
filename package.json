@@ -9,9 +9,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon  index.js",
-    "dev": "npx nodemon index.js",
-    "deploy": "firebase deploy --only functions"
+    "start": "nodemon  src/index.js",
+    "dev": "npx nodemon index.js"
+   
   },
   "keywords": [],
   "author": "",

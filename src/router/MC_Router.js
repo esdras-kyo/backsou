@@ -12,7 +12,7 @@ Mercado_Pago.post("/", async (req,res)=>{
             items: [
                 {
                     title: "Inscrição SOU 2024",
-                    unit_price: 1.00,
+                    unit_price: 90.00,
                     quantity: 1,
                     currency_id: "BRL",
 

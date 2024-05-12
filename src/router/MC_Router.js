@@ -20,9 +20,9 @@ Mercado_Pago.post("/", async (req,res)=>{
                 }
             ],
             back_urls: {
-                "success": "http://localhost:5173/sucess",
-                "failure": "http://localhost:5173/failure",
-                "pending": "http://localhost:5173/pending"
+                "success": "https://icmsede.com/sucess",
+                "failure": "https://icmsede.com/failure",
+                "pending": "https://icmsede.com/pending"
             },
             payer: {
                 id: dadosInscrito.id,

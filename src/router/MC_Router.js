@@ -3,7 +3,7 @@ import { MercadoPagoConfig, Payment, Preference, MerchantOrder } from 'mercadopa
 export const Mercado_Pago = Router();
 import { addRow, addRow1 } from "../index.js";
 
-const client = new MercadoPagoConfig({ accessToken:'TEST-6229538283536232-050212-87ea5475a201135099e0013a34ced51c-419452154', }) ;
+const client = new MercadoPagoConfig({ accessToken:'APP USR-2434767355315125-051115-35222d477c30accaOc9ablea9dda5244-245750728', }) ;
 
 Mercado_Pago.post("/", async (req,res)=>{
     try {

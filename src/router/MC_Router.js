@@ -35,7 +35,7 @@ Mercado_Pago.post("/", async (req,res)=>{
             },
 
             auto_return: "approved",
-            notification_url: "https://bdab-2804-37c4-82c5-42a0-39c4-8b0d-3535-94f6.ngrok-free.app/Mercado_Pago/webhook",
+            notification_url: "http://13.59.160.130:8080/Mercado_Pago/webhook",
         };
         const preference = new Preference(client);
         const result = await preference.create({body})

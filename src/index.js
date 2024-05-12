@@ -26,7 +26,7 @@ app.use((req,res,next)=>{
 async function getAuthSheets(){
     try {
         const auth = new google.auth.GoogleAuth({
-            keyFile: "credentials.json",
+            keyFile: "src/credentials.json",
             scopes: "https://www.googleapis.com/auth/spreadsheets",
         });
         const client = await auth.getClient();

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { MercadoPagoConfig, Payment, Preference, MerchantOrder } from 'mercadopago';
 export const Mercado_Pago = Router();
-import { addRow, addRow1 } from "../app.js";
+import { addRow, addRow1 } from "../index.js";
 
 const client = new MercadoPagoConfig({ accessToken:'TEST-6229538283536232-050212-87ea5475a201135099e0013a34ced51c-419452154', }) ;
 

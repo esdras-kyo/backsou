@@ -1,13 +1,13 @@
 import express from "express"
-import { getInscritos, getSingle, inscricao } from "./index.js"
 import cors from 'cors'
 import {Mercado_Pago} from './router/MC_Router.js'
 import { google} from "googleapis"
 import dotenv from 'dotenv'
-//import bodyParser from "body-parser"
+import functions from "firebase-functions"
+
 dotenv.config()
 
-export const port = process.env.PORT ? Number(process.env.PORT): 3000
+export const port = 8080
 export const app = express()
 
 app.use(express.json())
@@ -164,46 +164,11 @@ app.get("/", (req,res)=>{
     res.json("opa, é o backend!")
 })
 
-app.get("/inscritos", async (req,res)=> {
-    
-    const ins = await getInscritos()
-    res.send(ins)
-    
-})
+
 
 app.listen({port}, ()=>{
     console.log("Conectado ao servidor!")
 })
-
-app.get("inscritos/:cpf", async (req,res)=>{
-    const cpf = req.params.cpf
-    const inscrito = await getSingle(cpf)
-    res.send(inscrito)
-})
-
-
-app.post("/inscritos", async(req,res)=>{
-    const {name, email,fone, igreja, size, PayId, status} = req.body
-    const inscrito = await inscricao(name, email,fone, igreja, size, PayId, status)
-    res.status(201).send(inscrito)
-})
-
-app.post("/inscritos", async (req, res) => {
-    const { payId, newStatus } = req.body; // Supondo que você está enviando PayId e novo status no corpo da requisição
-
-    if (!payId || !newStatus) {
-        return res.status(400).send("PayId e novo status são obrigatórios.");
-    }
-
-    const result = await updateStatusByPayId(payId, newStatus);
-
-    if (result.success) {
-        res.send(result.message);
-    } else {
-        res.status(500).send(result.message);
-    }
-});
-
 
 app.use((err, req, res, next)=> {
     console.log(err.stack)

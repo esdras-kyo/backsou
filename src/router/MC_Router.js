@@ -35,7 +35,7 @@ Mercado_Pago.post("/", async (req,res)=>{
             },
 
             auto_return: "approved",
-            notification_url: "https://back.icmsede.com/Mercado_Pago/webhook",
+            notification_url: "https://sea-lion-app-u88ar.ondigitalocean.app/Mercado_Pago/webhook",
         };
         const preference = new Preference(client);
         const result = await preference.create({body})

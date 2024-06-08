@@ -15,6 +15,7 @@ app.use("/Mercado_Pago", Mercado_Pago);
 ///app.use(bodyParser)
 
 app.use((req,res,next)=>{
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Origin","https://icmsede.com");
     res.setHeader("Access-Control-Allow-Methods","GET, PUT, POST, DELETE");
     res.setHeader("Access-Control-Allow-Headers","Content-Type")
